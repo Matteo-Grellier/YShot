@@ -1,0 +1,25 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^16.2.1",
+        "@commitlint/config-conventional": "^16.2.1",
+        "axios": "^0.25",
+        "git-precommit-checks": "^3.0.7",
+        "husky": "^7.0.4",
+        "laravel-mix": "^6.0.6",
+        "lint-staged": "^12.3.5",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "prettier": "2.5.1"
+    }
+}
