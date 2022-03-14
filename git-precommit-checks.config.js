@@ -11,11 +11,6 @@ module.exports = {
             message: "Tu as des marqueurs de conflits qui traînent",
             regex: /^[<>|=]{4,}/m,
         },
-        {
-            message: "Aurais-tu oublié de terminer certaines tâches ?",
-            nonBlocking: true,
-            regex: /(?:FIXME|TODO)/,
-        },
         // JS specific
         {
             filter: /\.js$/,
