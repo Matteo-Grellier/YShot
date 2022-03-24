@@ -11,12 +11,14 @@
     },
     "devDependencies": {
         "@commitlint/cli": "^16.2.1",
+        "autoprefixer": "^10.4.4",
         "axios": "^0.25",
         "git-precommit-checks": "^3.0.7",
         "laravel-mix": "^6.0.6",
         "lint-staged": "^12.3.5",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
-        "prettier": "2.5.1"
+        "postcss": "^8.4.12",
+        "prettier": "2.5.1",
+        "tailwindcss": "^3.0.23"
     }
 }
