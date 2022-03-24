@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layouts.app')
+
+@section('title')
     <title>Admin Panel</title>
-</head>
-<body>
-    <h1>Admin Panel</h1>
-</body>
-</html>
+@endsection
+@section('content')
+    <div class="m-auto">
+        <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste de Sirops</h1>
+    
+    @foreach ($siropsList as $sirop)
+        <div>
+            <h3>{{ $sirop->name }}</h3>
+        </div>
+    @endforeach
+    </div>
+@endsection

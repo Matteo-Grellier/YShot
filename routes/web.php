@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 use App\Http\Controllers\AdminController;
 
@@ -14,9 +16,5 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.main');
+Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/', [AdminController::class, 'home']);
