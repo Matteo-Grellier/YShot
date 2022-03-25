@@ -12,5 +12,8 @@
             <h3>{{ $sirop->name }}</h3>
         </div>
     @endforeach
+    @include('admin.softs')
     </div>
+    
+
 @endsection
