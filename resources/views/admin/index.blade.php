@@ -11,6 +11,7 @@
     @include('admin.alcoolsTypes.alcoolsTypes')
     @include('admin.glassesTypes.glassesTypes')
     @include('admin.sirops')
+    @include('admin.fruits')
     </div>
     
 

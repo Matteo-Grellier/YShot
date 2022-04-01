@@ -47,3 +47,9 @@ Route::delete('/admin/delete_sirops', [AdminController::class, 'deleteSirops'])-
 Route::get('/admin/edit_sirop/{id}', [AdminController::class, 'editSirops'])->name('sirops.edit');
 Route::post('/admin/update_sirop/{id}', [AdminController::class, 'updateSirops'])->name('sirops.update');
 
+// CRUD routes for fruits
+Route::get('/admin/create_fruits', [AdminController::class, 'createFruits'])->name('admin.create_fruits');
+Route::post('/admin', [AdminController::class, 'storeFruits'])->name('admin.store_fruits');
+Route::get('/admin/{id}/edit_fruits', [AdminController::class, 'editFruits'])->name('admin.edit_fruits');
+Route::put('/admin/{id}/update_fruits', [AdminController::class, 'updateFruits'])->name('admin.update_fruits');
+Route::delete('/admin', [AdminController::class, 'deleteFruits'])->name('admin.delete_fruits');
