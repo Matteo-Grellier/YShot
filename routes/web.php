@@ -19,6 +19,7 @@ use App\Http\Controllers\GlassesTypesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/admin', [AdminController::class, 'index'])->name("admin.home");
 Route::get('/', [AdminController::class, 'home'])->name("home");
 
@@ -39,3 +40,10 @@ Route::post('/admin/create_glasses_types', [GlassesTypesController::class, 'crea
 Route::get('/admin/edit_glasses_types/{id}', [GlassesTypesController::class, 'edit'])->name('admin.edit_glasses_types');
 Route::put('/admin/update_glasses_types/{id}', [GlassesTypesController::class, 'update'])->name('admin.update_glasses_types');
 Route::delete('/admin/delete_glasses_types', [GlassesTypesController::class, 'delete'])->name('admin.delete_glasses_types');
+
+//CRUD routes for sirops
+Route::post('/admin/create_sirop', [AdminController::class, 'createSirops'])->name('sirops.create');
+Route::delete('/admin/delete_sirops', [AdminController::class, 'deleteSirops'])->name('sirops.delete');
+Route::get('/admin/edit_sirop/{id}', [AdminController::class, 'editSirops'])->name('sirops.edit');
+Route::post('/admin/update_sirop/{id}', [AdminController::class, 'updateSirops'])->name('sirops.update');
+
