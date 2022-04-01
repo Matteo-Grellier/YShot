@@ -8,6 +8,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SoftsListController;
 use App\Http\Controllers\AlcoolsTypesController;
 use App\Http\Controllers\GlassesTypesController;
+use App\Http\Controllers\FruitsController;
+use App\Http\Controllers\SiropsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,14 +44,14 @@ Route::put('/admin/update_glasses_types/{id}', [GlassesTypesController::class, '
 Route::delete('/admin/delete_glasses_types', [GlassesTypesController::class, 'delete'])->name('admin.delete_glasses_types');
 
 //CRUD routes for sirops
-Route::post('/admin/create_sirop', [AdminController::class, 'createSirops'])->name('sirops.create');
-Route::delete('/admin/delete_sirops', [AdminController::class, 'deleteSirops'])->name('sirops.delete');
-Route::get('/admin/edit_sirop/{id}', [AdminController::class, 'editSirops'])->name('sirops.edit');
-Route::post('/admin/update_sirop/{id}', [AdminController::class, 'updateSirops'])->name('sirops.update');
+Route::post('/admin/create_sirop', [SiropsController::class, 'createSirops'])->name('sirops.create');
+Route::delete('/admin/delete_sirops', [SiropsController::class, 'deleteSirops'])->name('sirops.delete');
+Route::get('/admin/edit_sirop/{id}', [SiropsController::class, 'editSirops'])->name('sirops.edit');
+Route::post('/admin/update_sirop/{id}', [SiropsController::class, 'updateSirops'])->name('sirops.update');
 
 // CRUD routes for fruits
-Route::get('/admin/create_fruits', [AdminController::class, 'createFruits'])->name('admin.create_fruits');
-Route::post('/admin', [AdminController::class, 'storeFruits'])->name('admin.store_fruits');
-Route::get('/admin/{id}/edit_fruits', [AdminController::class, 'editFruits'])->name('admin.edit_fruits');
-Route::put('/admin/{id}/update_fruits', [AdminController::class, 'updateFruits'])->name('admin.update_fruits');
-Route::delete('/admin', [AdminController::class, 'deleteFruits'])->name('admin.delete_fruits');
+Route::get('/admin/create_fruits', [FruitsController::class, 'createFruits'])->name('admin.create_fruits');
+Route::post('/admin', [FruitsController::class, 'storeFruits'])->name('admin.store_fruits');
+Route::get('/admin/{id}/edit_fruits', [FruitsController::class, 'editFruits'])->name('admin.edit_fruits');
+Route::put('/admin/{id}/update_fruits', [FruitsController::class, 'updateFruits'])->name('admin.update_fruits');
+Route::delete('/admin/delete_fruits', [FruitsController::class, 'deleteFruits'])->name('admin.delete_fruits');
