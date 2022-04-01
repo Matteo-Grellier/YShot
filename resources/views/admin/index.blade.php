@@ -13,6 +13,8 @@
         </div>
     @endforeach
     @include('admin.softs')
+    @include('admin.alcoolsTypes.alcoolsTypes')
+    @include('admin.glassesTypes.glassesTypes')
     </div>
     
 
