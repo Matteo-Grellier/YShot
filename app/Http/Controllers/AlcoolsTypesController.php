@@ -9,7 +9,7 @@ class AlcoolsTypesController extends Controller
 {
     //
      //
-     public function create(Request $request) {
+    public function create(Request $request) {
         //dd ( $request->get('name'));
         $alcoolType = new AlcoolsTypes();
         $alcoolType->name = $request->get('name');

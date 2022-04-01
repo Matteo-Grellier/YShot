@@ -1,5 +1,5 @@
 <div>
-    <h3>Liste de type de verre</h3>
+    <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste de type de verre</h1>
     <table>
         <thead>
             <tr>
@@ -32,6 +32,7 @@
     <form action="{{ route('admin.create_glasses_types') }}" method="POST">
         @csrf
         <input type="text" name="name" placeholder="name">
+        <input type="file" name="image" accept=".gif,.jpg,.jpeg,.png">
         <button type="submit">Create Soft</button>
     </form>
 </div>

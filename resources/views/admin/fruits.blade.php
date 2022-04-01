@@ -18,4 +18,8 @@
         <p>----------</p>
     </div>
 @endforeach
-<a href="{{ route('admin.create_fruits') }}" >add a fruit</a>
+<form action="{{ route('admin.store_fruits') }}" method="POST">
+    @csrf
+    <input type="text" name="name" placeholder="name">
+    <button type="submit">Envoyer</button>
+</form>

@@ -1,4 +1,5 @@
 <div class="w-1 flex-col ">
+    <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste des Sirops</h1>
     <table class="table-auto border-collapse border border-slate-500 ">
         <thead>
             <tr>
