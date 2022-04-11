@@ -15,6 +15,7 @@ class AlcoolsName extends Model
 
     protected $fillable= [
         "name",
+        "degree",
         "alcools_id"
     ];
 

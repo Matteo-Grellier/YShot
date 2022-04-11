@@ -1,4 +1,4 @@
-<div>
+<div class="softList">
     <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste de soft</h1>
     <table>
         <thead>

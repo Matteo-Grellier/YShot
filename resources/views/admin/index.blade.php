@@ -4,7 +4,7 @@
     <title>Admin Panel</title>
 @endsection
 @section('content')
-    <div class="m-auto">   
+    <div class="admin">   
         @include('admin.softs')
         @include('admin.alcoolsTypes.alcoolsTypes')
         @include('admin.glassesTypes.glassesTypes')

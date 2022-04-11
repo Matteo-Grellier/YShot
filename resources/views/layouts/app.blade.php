@@ -8,8 +8,8 @@
     @yield('title')
 </head>
 <body>
-    <div class="flex h-screen">
-        @yield('content')
-    </div>
+
+    @yield('content')
+
 </body>
 </html>

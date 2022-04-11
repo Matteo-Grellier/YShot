@@ -1,6 +1,6 @@
-<div>
-    <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste de noms d'alcool</h1>
-    <table>
+<div class="child">
+    <h1 class="">Liste de noms d'alcool</h1>
+    <table class="alcoolTable">
         <thead>
             <tr>
                 <th>Id</th>
@@ -31,7 +31,7 @@
     <form action="{{ route('admin.create_alcool_name') }}" method="POST">
         @csrf
         <input type="text" name="name" placeholder="name">
-        <input type="text" name="degré" placeholder="degré">
+        <input type="text" name="degree" placeholder="degree">
         <input type="text" name="alcools_types_id" placeholder="alcools_types_id">
         <button type="submit">Create alcool</button>
     </form>
