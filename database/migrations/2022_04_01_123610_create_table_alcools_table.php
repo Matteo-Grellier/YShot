@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('table_alcools', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('degré');
+            $table->integer('degree');
             $table->foreignId('alcools_types_id')->constrained();
             $table->timestamps();
         });

@@ -12,6 +12,7 @@ class GlassesTypes extends Model
     protected $table="glasses_types";
 
     protected $fillable= [
-        "name"
+        "name",
+        "image_path"
     ];
 }

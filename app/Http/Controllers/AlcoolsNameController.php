@@ -12,7 +12,7 @@ class AlcoolsNameController extends Controller
         //dd ( $request->get('name'));
         $alcoolName = new AlcoolsName();
         $alcoolName->name = $request->get('name');
-        $alcoolName->degré = $request->get('degré');
+        $alcoolName->degree = $request->get('degree');
         $alcoolName->alcools_types_id = $request->get('alcools_types_id');
         $alcoolName->save();
 

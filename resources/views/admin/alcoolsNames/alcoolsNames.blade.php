@@ -31,7 +31,7 @@
     <form action="{{ route('admin.create_alcool_name') }}" method="POST">
         @csrf
         <input type="text" name="name" placeholder="name">
-        <input type="text" name="degré" placeholder="degré">
+        <input type="text" name="degree" placeholder="degree">
         <input type="text" name="alcools_types_id" placeholder="alcools_types_id">
         <button type="submit">Create alcool</button>
     </form>

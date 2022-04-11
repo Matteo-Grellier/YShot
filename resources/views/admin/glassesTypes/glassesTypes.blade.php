@@ -5,6 +5,7 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th>Image</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -14,6 +15,7 @@
                     <tr>
                         <td>{{ $glassType->id }}</td>
                         <td>{{ $glassType->name }}</td>
+                        <td><img src="{{ "../storage/app/public/" . $glassType->image_path }}" width="100" height="100%"/></td>
                         <td>
                             <a href="{{ route('admin.edit_glasses_types', $glassType->id) }}">Modifier</a>
                             <form action="{{ route('admin.delete_glasses_types') }}" method="POST">
@@ -29,10 +31,10 @@
             @endif
         </tbody>
     </table>
-    <form action="{{ route('admin.create_glasses_types') }}" method="POST">
+    <form action="{{ route('admin.create_glasses_types') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="text" name="name" placeholder="name">
-        <input type="file" name="image" accept=".gif,.jpg,.jpeg,.png">
+        <input type="file" name="image" accept=".gif, image/jpg, image/jpeg, image/png">
         <button type="submit">Create Soft</button>
     </form>
 </div>
