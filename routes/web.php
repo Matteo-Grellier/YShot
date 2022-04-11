@@ -1,15 +1,14 @@
 <?php
 
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
 
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\SoftsListController;
-use App\Http\Controllers\AlcoolsTypesController;
-use App\Http\Controllers\GlassesTypesController;
 use App\Http\Controllers\FruitsController;
 use App\Http\Controllers\SiropsController;
+use App\Http\Controllers\SoftsListController;
+use App\Http\Controllers\AlcoolsNameController;
+use App\Http\Controllers\AlcoolsTypesController;
+use App\Http\Controllers\GlassesTypesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +34,7 @@ Route::delete('/admin/delete_soft', [SoftsListController::class, 'delete'])->nam
 Route::post('/admin/create_alcools_types', [AlcoolsTypesController::class, 'create'])->name('admin.create_alcools_types');
 Route::get('/admin/edit_alcools_types/{id}', [AlcoolsTypesController::class, 'edit'])->name('admin.edit_alcools_types');
 Route::put('/admin/update_alcools_types/{id}', [AlcoolsTypesController::class, 'update'])->name('admin.update_alcools_types');
-Route::delete('/admin/delete_alcools_types', [AlcoolsTypesController::class, 'delete'])->name('admin.delete_alcools_types');
+Route::delete('/admin/delete_alcools_types', [AlcoolsTypesController::class, 'delete'])->name('admin.delete_alcools_types'); 
 
 //CRUD routes for glasses types
 Route::post('/admin/create_glasses_types', [GlassesTypesController::class, 'create'])->name('admin.create_glasses_types');
@@ -55,3 +54,10 @@ Route::post('/admin', [FruitsController::class, 'storeFruits'])->name('admin.sto
 Route::get('/admin/{id}/edit_fruits', [FruitsController::class, 'editFruits'])->name('admin.edit_fruits');
 Route::put('/admin/{id}/update_fruits', [FruitsController::class, 'updateFruits'])->name('admin.update_fruits');
 Route::delete('/admin/delete_fruits', [FruitsController::class, 'deleteFruits'])->name('admin.delete_fruits');
+
+// CRUD routes for alcools
+route::post('/admin/create_alcools', [AlcoolsNameController::class, 'create'])->name('admin.create_alcool_name');
+route::get('/admin/{id}/edit_alcools', [AlcoolsNameController::class, 'edit'])->name('admin.edit_alcool_name');
+route::put('/admin/{id}/update_alcools', [AlcoolsNameController::class, 'update'])->name('admin.update_alcool_name');
+route::delete('/admin/delete_alcools', [AlcoolsNameController::class, 'destroy'])->name('admin.delete_alcool_name');
+

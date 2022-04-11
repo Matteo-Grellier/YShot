@@ -470,6 +470,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .table {
   display: table;
 }
+.hidden {
+  display: none;
+}
 .h-screen {
   height: 100vh;
 }

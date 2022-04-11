@@ -10,7 +10,7 @@
         @include('admin.glassesTypes.glassesTypes')
         @include('admin.sirops')
         @include('admin.fruits')
+        @include('admin.alcoolsNames.alcoolsNames')
     </div>
     
-
 @endsection

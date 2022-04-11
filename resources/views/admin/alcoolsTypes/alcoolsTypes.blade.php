@@ -26,6 +26,9 @@
                         </td>
                     </tr>
                 @endforeach
+                {{-- @foreach($alcoolType->alcoolsName as $alcoolName)
+                    <span>{{$alcoolName->nom}}</span>
+                @endforeach --}}
             @endif
         </tbody>
     </table>

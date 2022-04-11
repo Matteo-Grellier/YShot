@@ -15,10 +15,9 @@ return new class extends Migration
     {
         Schema::create('table_alcools', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
+            $table->string('name');
             $table->integer('degré');
-            $table->unsignedBigInteger('alcool_id')->index();
-            $table->foreign('alcool_id')->references('id')->on('alcools_types');
+            $table->foreignId('alcools_types_id')->constrained();
             $table->timestamps();
         });
     }
