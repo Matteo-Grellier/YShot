@@ -16,7 +16,7 @@ class AlcoolsNameController extends Controller
         $alcoolName->alcools_types_id = $request->get('alcools_types_id');
         $alcoolName->save();
 
-        return redirect()->route("admin.home");
+        return redirect()->route("admin.manage_ingredients");
     }
 
     public function edit($id)
@@ -30,13 +30,13 @@ class AlcoolsNameController extends Controller
     {
         $alcoolName = AlcoolsName::find($id);
         $alcoolName->update($request->all());
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
     }
 
     public function destroy(Request $request)
     {
         AlcoolsName::destroy($request->get('alcool_name_id'));
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
     }
 
 

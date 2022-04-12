@@ -1,3 +1,5 @@
+
+
 <div>
     <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste de type de verre</h1>
     <table>
@@ -15,7 +17,7 @@
                     <tr>
                         <td>{{ $glassType->id }}</td>
                         <td>{{ $glassType->name }}</td>
-                        <td><img src="{{ "../storage/app/public/" . $glassType->image_path }}" width="100" height="100%"/></td>
+                        <td><img src="{{ asset('../storage/app/public/' . $glassType->image_path) }}" width="100" height="100%"/></td>
                         <td>
                             <a href="{{ route('admin.edit_glasses_types', $glassType->id) }}">Modifier</a>
                             <form action="{{ route('admin.delete_glasses_types') }}" method="POST">

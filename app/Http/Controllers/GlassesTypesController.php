@@ -20,7 +20,7 @@ class GlassesTypesController extends Controller
         $glassType->image_path = $filePath;
         $glassType->save();
 
-        return redirect()->route("admin.home");
+        return redirect()->route("admin.manage_ingredients");
     }
 
     public function edit($id) {
@@ -42,7 +42,7 @@ class GlassesTypesController extends Controller
 
         $glassType->save();
 
-        return redirect()->route("admin.home");
+        return redirect()->route("admin.manage_ingredients");
     }
 
     public function delete(Request $request) {
@@ -50,6 +50,6 @@ class GlassesTypesController extends Controller
         Storage::delete('public/' . $glassType->image_path);
         GlassesTypes::destroy($request->get('glasses_types_id'));
         
-        return redirect()->route("admin.home");
+        return redirect()->route("admin.manage_ingredients");
     }
 }

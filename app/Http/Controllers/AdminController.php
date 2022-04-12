@@ -17,6 +17,10 @@ class AdminController extends Controller
     //
     public function index() {
 
+        return view('admin.index');
+    }
+    
+    public function manageIngredients() {
         $alcoolsNames = AlcoolsName::with('alcoolType')->get();
         $siropsList = table_sirops::all();
         $softsList = SoftList::all();
@@ -24,8 +28,19 @@ class AdminController extends Controller
         $glassesTypes = GlassesTypes::all();
         $fruitsList = fruits_table::all();
 
-        return view('admin.index', compact('siropsList', 'softsList', 'alcoolsTypes', 'glassesTypes', 'fruitsList', 'alcoolsNames'));
-    } 
+        return view('admin.manageIngredients', compact('siropsList', 'softsList', 'alcoolsTypes', 'glassesTypes', 'fruitsList', 'alcoolsNames'));
+    }
+
+    public function manageCocktails() {
+        $alcoolsNames = AlcoolsName::with('alcoolType')->get();
+        $siropsList = table_sirops::all();
+        $softsList = SoftList::all();
+        $alcoolsTypes = AlcoolsTypes::all();
+        $glassesTypes = GlassesTypes::all();
+        $fruitsList = fruits_table::all();
+
+        return view('admin.manageCocktails', compact('siropsList', 'softsList', 'alcoolsTypes', 'glassesTypes', 'fruitsList', 'alcoolsNames'));      
+    }
 
     public function home(){
         return view('welcome');

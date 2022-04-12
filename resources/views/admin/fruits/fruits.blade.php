@@ -5,7 +5,7 @@
         <p>{{ $fruit->id }}</p>
         <h3>{{ $fruit->name }}</h3>
         {{-- <h3>{{ $fruit->file_path }}</h3> --}}
-        <td><img src="{{ "../storage/app/public/" . $fruit->file_path }}" width="100" height="100%"/></td>
+        <td><img src="{{ asset('../storage/app/public/' . $fruit->file_path) }}" width="100" height="100%"/></td>
 
         <a href="{{ route('admin.edit_fruits', $fruit->id) }}" >modifier</a>
         <form action="{{ route('admin.delete_fruits') }}" method="POST">

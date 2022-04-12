@@ -25,13 +25,13 @@ class FruitsController extends Controller
         $fruits->name = $request->get("name");
         $fruits->file_path = $filePath;
         $fruits->save();
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
     }
 
     public function editFruits($id)
     {
         $fruits = fruits_table::findOrFail($id);
-        return view('admin.editFruits', compact('fruits'));
+        return view('admin.fruits.editFruits', compact('fruits'));
     }
 
     public function updateFruits(Request $request ,$id)
@@ -49,7 +49,7 @@ class FruitsController extends Controller
         }
 
         $fruits->save();
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
 
     }
 
@@ -58,6 +58,6 @@ class FruitsController extends Controller
         $fruits = fruits_table::findOrFail($request->get('fruits_id'));
         Storage::delete('public/' . $fruits->file_path);
         fruits_table::destroy($request->get("fruits_id"));   
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
     }
 }
