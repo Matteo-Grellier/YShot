@@ -17,7 +17,7 @@ class AdminController extends Controller
     //
     public function index() {
 
-        $alcoolsNames = AlcoolsName::all();
+        $alcoolsNames = AlcoolsName::with('alcoolType')->get();
         $siropsList = table_sirops::all();
         $softsList = SoftList::all();
         $alcoolsTypes = AlcoolsTypes::all();

@@ -23,4 +23,4 @@
     <input type="text" name="name" placeholder="name">
     <input type="file" name="image" accept=".gif, image/jpg, image/jpeg, image/png">
     <button type="submit">Envoyer</button>
-</form> --}}
+</form>

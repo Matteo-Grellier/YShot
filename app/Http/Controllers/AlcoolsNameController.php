@@ -23,7 +23,7 @@ class AlcoolsNameController extends Controller
     {
         $alcoolName = AlcoolsName::find($id);
         $alcoolsTypes = AlcoolsTypes::all();
-        return view('admin.alcools_names.editAlcoolsNames', compact('alcoolType'));
+        return view('admin.alcoolsNames.editAlcoolsNames', compact('alcoolName','alcoolsTypes'));
     }
 
     public function update(Request $request, $id)
@@ -35,7 +35,7 @@ class AlcoolsNameController extends Controller
 
     public function destroy(Request $request)
     {
-        AlcoolsName::destroy($request->get('alcools_names_id'));
+        AlcoolsName::destroy($request->get('alcool_name_id'));
         return redirect()->route('admin.home');
     }
 

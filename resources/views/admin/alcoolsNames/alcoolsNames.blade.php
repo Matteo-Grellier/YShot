@@ -3,8 +3,9 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
+                <th>Degré</th>
+                <th>Type d'alcool</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -12,7 +13,9 @@
             @if(!is_null($alcoolsTypes) && !empty($alcoolsTypes))
                 @foreach ($alcoolsNames as $alcoolName)
                     <tr>
-                        <td>{{ $alcoolName->nom }}</td>
+                        <td>{{ $alcoolName->name }}</td>
+                        <td>{{ $alcoolName->degree }}</td>
+                        <td>{{ $alcoolName->alcoolType->name }}</td>
                         <td>
                             <a href="{{ route('admin.edit_alcool_name', $alcoolName->id) }}">Modifier</a>
                             <form action="{{ route('admin.delete_alcool_name') }}" method="POST">
@@ -32,7 +35,11 @@
         @csrf
         <input type="text" name="name" placeholder="name">
         <input type="text" name="degree" placeholder="degree">
-        <input type="text" name="alcools_types_id" placeholder="alcools_types_id">
+        <select name="alcools_types_id">
+            @foreach($alcoolsTypes as $alcoolType) 
+                <option value={{ $alcoolType->id }}>{{ $alcoolType->name }}</option>
+            @endforeach
+        </select>
         <button type="submit">Create alcool</button>
     </form>
 </div>
