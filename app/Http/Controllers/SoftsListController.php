@@ -15,12 +15,12 @@ class SoftsListController extends Controller
         $soft->name = $request->get('name');
         $soft->save();
 
-        return redirect()->route("admin.home");
+        return redirect()->route("admin.manage_ingredients");
     }
 
     public function edit($id) {
         $soft = SoftList::findOrFail($id);
-        return view('admin.editSoft', compact('soft'));
+        return view('admin.softs.editSoft', compact('soft'));
     }
 
     public function update(Request $request, $id) {
@@ -28,12 +28,12 @@ class SoftsListController extends Controller
         $soft->name = $request->get('name');
         $soft->save();
 
-        return redirect()->route("admin.home");
+        return redirect()->route("admin.manage_ingredients");
     }
 
     public function delete(Request $request) {
         $soft = SoftList::destroy($request->get('soft_id'));
 
-        return redirect()->route("admin.home");
+        return redirect()->route("admin.manage_ingredients");
     }
 }

@@ -5,8 +5,8 @@
         <p>{{ $fruit->id }}</p>
         <h3>{{ $fruit->name }}</h3>
         {{-- <h3>{{ $fruit->file_path }}</h3> --}}
-        <img src="{{ "img/" . $fruit->file_path}}" width="400" height="500"/>
-        
+        <td><img src="{{ asset('../storage/app/public/' . $fruit->file_path) }}" width="100" height="100%"/></td>
+
         <a href="{{ route('admin.edit_fruits', $fruit->id) }}" >modifier</a>
         <form action="{{ route('admin.delete_fruits') }}" method="POST">
             @csrf
@@ -16,11 +16,11 @@
         </form>
         {{-- <a class="del" href="{{ route('admin.delete_fruits', $fruit->id) }}">supprimer</a> --}}
         <p>----------</p>
-        
-        @endforeach
-        <form action="{{ route('admin.store_fruits') }}" method="POST">
-            @csrf
-            <input type="text" name="name" placeholder="name">
-            <button type="submit">Envoyer</button>
-        </form>
-
+    </div>
+@endforeach
+<form action="{{ route('admin.store_fruits') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <input type="text" name="name" placeholder="name">
+    <input type="file" name="image" accept=".gif, image/jpg, image/jpeg, image/png">
+    <button type="submit">Envoyer</button>
+</form>

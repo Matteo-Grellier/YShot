@@ -16,10 +16,10 @@ class AlcoolsName extends Model
     protected $fillable= [
         "name",
         "degree",
-        "alcools_id"
+        "alcools_types_id"
     ];
 
     public function alcoolType(){
-        return $this->belongsTo(AlcoolsTypes::class);
+        return $this->belongsTo('App\Models\AlcoolsTypes', 'alcools_types_id');
     }
 }

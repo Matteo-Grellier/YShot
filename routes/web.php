@@ -22,6 +22,8 @@ use App\Http\Controllers\GlassesTypesController;
 */
 
 Route::get('/admin', [AdminController::class, 'index'])->name("admin.home");
+Route::get('/admin/manage_ingredients', [AdminController::class, 'manageIngredients'])->name("admin.manage_ingredients");
+Route::get('/admin/manage_cocktails', [AdminController::class, 'manageCocktails'])->name("admin.manage_cocktails");
 Route::get('/', [AdminController::class, 'home'])->name("home");
 
 //CRUD routes for soft

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\File; 
 use App\Models\fruits_table;
+use Illuminate\Support\Facades\Storage;
 
 
 class FruitsController extends Controller
@@ -16,18 +17,21 @@ class FruitsController extends Controller
 
     public function storeFruits(Request $request)
     {
+        $file = $request->file('image');
+        $fileName = time().'_'.$file->getClientOriginalName();
+        $filePath = $file->storeAs('uploads', $fileName, 'public');
         // dd($request->get("name"));
         $fruits = new fruits_table();
         $fruits->name = $request->get("name");
-        $fruits->file_path = $request->get("name") . ".png";
+        $fruits->file_path = $filePath;
         $fruits->save();
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
     }
 
     public function editFruits($id)
     {
         $fruits = fruits_table::findOrFail($id);
-        return view('admin.editFruits', compact('fruits'));
+        return view('admin.fruits.editFruits', compact('fruits'));
     }
 
     public function updateFruits(Request $request ,$id)
@@ -35,15 +39,25 @@ class FruitsController extends Controller
         // dd($request, $id);
         $fruits = fruits_table::findOrFail($id);
         $fruits->name = $request->get("name");
-        $fruits->file_path = $request->get("name") . ".png";
+
+        if($request->file()) {
+            Storage::delete('public/' . $fruits->file_path);
+            $file = $request->file('image');
+            $fileName = time().'_'.$file->getClientOriginalName();
+            $filePath = $file->storeAs('uploads', $fileName, 'public');
+            $fruits->file_path = $filePath;
+        }
+
         $fruits->save();
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
 
     }
 
     public function deleteFruits(Request $request)
     {
-        $fruits = fruits_table::destroy($request->get("fruits_id"));
-        return redirect()->route('admin.home');
+        $fruits = fruits_table::findOrFail($request->get('fruits_id'));
+        Storage::delete('public/' . $fruits->file_path);
+        fruits_table::destroy($request->get("fruits_id"));   
+        return redirect()->route('admin.manage_ingredients');
     }
 }

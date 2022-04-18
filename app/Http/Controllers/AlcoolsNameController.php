@@ -12,31 +12,31 @@ class AlcoolsNameController extends Controller
         //dd ( $request->get('name'));
         $alcoolName = new AlcoolsName();
         $alcoolName->name = $request->get('name');
-        $alcoolName->degré = $request->get('degree');
+        $alcoolName->degree = $request->get('degree');
         $alcoolName->alcools_types_id = $request->get('alcools_types_id');
         $alcoolName->save();
 
-        return redirect()->route("admin.home");
+        return redirect()->route("admin.manage_ingredients");
     }
 
     public function edit($id)
     {
         $alcoolName = AlcoolsName::find($id);
         $alcoolsTypes = AlcoolsTypes::all();
-        return view('admin.alcools_names.editAlcoolsNames', compact('alcoolType'));
+        return view('admin.alcoolsNames.editAlcoolsNames', compact('alcoolName','alcoolsTypes'));
     }
 
     public function update(Request $request, $id)
     {
         $alcoolName = AlcoolsName::find($id);
         $alcoolName->update($request->all());
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
     }
 
     public function destroy(Request $request)
     {
-        AlcoolsName::destroy($request->get('alcools_names_id'));
-        return redirect()->route('admin.home');
+        AlcoolsName::destroy($request->get('alcool_name_id'));
+        return redirect()->route('admin.manage_ingredients');
     }
 
 

@@ -15,18 +15,18 @@ class SiropsController extends Controller
         $sirops->name = $request->get('name');
         $sirops->save();
 
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
     }
     public function deleteSirops(Request $request) {
         table_sirops::destroy($request->get('sirops_id'));
         
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
     }
 
     public function editSirops($id) {
         $sirops = table_sirops::find($id);
 
-        return view('admin.editSirops', compact('sirops'));
+        return view('admin.sirops.editSirops', compact('sirops'));
     }
 
 
@@ -35,6 +35,6 @@ class SiropsController extends Controller
         $sirops->name = $request->get('name');
         $sirops->save();
 
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.manage_ingredients');
     }
 }
