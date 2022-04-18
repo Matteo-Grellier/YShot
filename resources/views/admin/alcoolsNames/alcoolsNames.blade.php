@@ -1,6 +1,6 @@
-<div>
-    <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste de noms d'alcool</h1>
-    <table>
+<div class="child">
+    <h1 class="">Liste de noms d'alcool</h1>
+    <table class="alcoolTable">
         <thead>
             <tr>
                 <th>Name</th>

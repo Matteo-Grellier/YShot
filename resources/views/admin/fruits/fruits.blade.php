@@ -1,7 +1,7 @@
 
-<h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste des Fruits</h1>
-@foreach ($fruitsList as $fruit)
-    <div>
+<h1 class="child">Liste des Fruits</h1>
+        @foreach ($fruitsList as $fruit)    
+    <div class="child">
         <p>{{ $fruit->id }}</p>
         <h3>{{ $fruit->name }}</h3>
         {{-- <h3>{{ $fruit->file_path }}</h3> --}}

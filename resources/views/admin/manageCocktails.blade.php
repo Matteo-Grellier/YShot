@@ -5,7 +5,11 @@
 @endsection
 @section('content')
 
-    <div>   
+    <div class="manage_cocktail_container">
+        <div>
+            <a href="">< Retour</a>
+            <h1>Liste des cocktails
+        </div>   
         @include('admin.cocktails.cocktails')
     </div>
 @endsection
