@@ -16,9 +16,14 @@ return new class extends Migration
         Schema::create('cocktails_alcools', function (Blueprint $table) {
             $table->id();
             $table->integer("quantity");
-            $table->foreignId('cocktails_id')->constrained();
-            $table->foreignId('table_alcools_id')->constrained();
+            $table->unsignedBigInteger('cocktails_id');
+            $table->unsignedBigInteger('table_alcools_id');
             $table->timestamps();
+        });
+
+        Schema::table('cocktails_alcools', function (Blueprint $table) {
+            $table->foreign('table_alcools_id')->references("id")->on("table_alcools")->onDelete('cascade')->constrained();
+            $table->foreign('cocktails_id')->references("id")->on("cocktails")->onDelete('cascade')->constrained();
         });
     }
 

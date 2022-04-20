@@ -16,13 +16,14 @@ return new class extends Migration
         Schema::create('cocktails_sirops', function (Blueprint $table) {
             $table->id();
             $table->integer("quantity");
-            $table->foreignId('cocktails_id')->constrained();
+            $table->unsignedBigInteger('cocktails_id');
             $table->unsignedBigInteger('sirops_id');
             $table->timestamps();
         });
 
         Schema::table('cocktails_sirops', function (Blueprint $table){
-            $table->foreign('sirops_id')->references("id")->on("table_sirops")->constrained();
+            $table->foreign('sirops_id')->references("id")->on("table_sirops")->onDelete('cascade')->constrained();
+            $table->foreign('cocktails_id')->references("id")->on("cocktails")->onDelete('cascade')->constrained();
         });
     }
 
