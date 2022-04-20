@@ -7,8 +7,8 @@
 
     <div class="manage_cocktail_container">
         <div>
-            <a href="">< Retour</a>
-            <h1>Liste des cocktails
+            <a href="{{route("admin.home")}}">< Retour</a>
+            <h1>Liste des cocktails</h1>
         </div>   
         @include('admin.cocktails.cocktails')
     </div>

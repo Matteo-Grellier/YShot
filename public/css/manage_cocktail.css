@@ -2,12 +2,165 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
+    color: rgb(28, 28, 28);
 }
 
 .cocktails-list-table {
     font-family: 'Open Sans';
-    border: 1px solid #333;
+    /* border: 1px solid rgb(166, 166, 166); */
+    border-collapse: collapse;
+    background-color: rgb(255, 245, 245);
 }
+
+.cocktails-list-table th, td {
+    border: 1px solid rgb(255, 255, 255);
+    /* border: none; */
+}
+
+
+.cocktails-list-table th {
+    /* background-color: #f1b5b8; */
+    /* background-color: #F16268; */
+    background-color: #212121;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    /* color: #fff; */
+}
+
+.manage_cocktail_container td form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manage_cocktail_container input {
+    font-family: "Open Sans";
+    border: none;
+    background: none;
+    border-bottom: 1px solid #F16268;
+    margin: 0 10px;
+}
+
+.manage_cocktail_container select {
+    font-family: "Open Sans";
+    background: none;
+    padding: 0.3em;
+    border: 1px solid #F16268;
+    border-radius: 10px;
+    width: 6em;
+    margin: 0 10px;
+}
+
+.manage_cocktail_container td form input[type="number"] {
+    width: 3.2em;
+}
+
+.manage_cocktail_container button {
+    /* background-color: #F16268; */
+    font-family: "Open Sans";
+    display: flex;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    border: none;
+    border-radius: 70px;
+    margin: 0 10px;
+}
+
+.manage_cocktail_container button:hover {
+    background-color: #ffc3c6;
+}
+
+/* .form-create-cocktail {
+    background-color: #ffadad;
+    display: flex;
+    width: 100%;
+    border: none;
+    justify-content: center;
+} */
+
+.form-create-cocktail form {
+    background-color: #ffd3d3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-cocktail-btn {
+    border: 2px solid #F16268;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* COCKTAIL_INGREDIENT */
+
+.content-cocktail-ingredients {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content-cocktail-ingredients .cocktail-ingredient {
+    display: flex;
+    border-radius: 0.2em;
+    margin: 0.2em;
+}
+
+.cocktail-ingredient button:hover {
+    background: none;
+    font-weight: bold;
+}
+
+.content-cocktail-ingredients h3{
+    cursor:default;
+    font-size: 16px;
+    font-weight: normal;   
+    color:rgb(80, 80, 80);
+    margin: 0.3em;
+}
+
+/* cocktail alcool */
+.cocktail-alcool-element {
+    background-color: rgb(255, 179, 228);
+}
+
+.cocktail-alcool-element:hover {
+    background-color: rgb(255, 153, 219);
+}
+
+/* cocktail soft */
+.cocktail-softs-element {
+    background-color: rgb(202, 255, 184);
+}
+
+.cocktail-softs-element:hover {
+    background-color: rgb(173, 255, 146);
+}
+
+/* cocktail fruit */
+.cocktail-fruits-element {
+    background-color: rgb(255, 218, 184);
+}
+
+.cocktail-fruits-element:hover {
+    background-color: rgb(255, 191, 146);
+}
+
+/* cocktail sirop */
+.cocktail-sirops-element {
+    background-color: rgb(184, 255, 251);
+}
+
+.cocktail-sirops-element:hover {
+    background-color: rgb(146, 255, 224);
+}
+
+
+
+
+
 
 
 
