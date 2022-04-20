@@ -9,6 +9,7 @@ use App\Http\Controllers\SoftsListController;
 use App\Http\Controllers\AlcoolsNameController;
 use App\Http\Controllers\AlcoolsTypesController;
 use App\Http\Controllers\GlassesTypesController;
+use App\Http\Controllers\CocktailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,20 @@ route::get('/admin/{id}/edit_alcools', [AlcoolsNameController::class, 'edit'])->
 route::put('/admin/{id}/update_alcools', [AlcoolsNameController::class, 'update'])->name('admin.update_alcool_name');
 route::delete('/admin/delete_alcools', [AlcoolsNameController::class, 'destroy'])->name('admin.delete_alcool_name');
 
+// CRUD routes for cocktails
+route::post('/admin/create_cocktail', [CocktailsController::class, 'create'])->name('admin.create_cocktail');
+route::put('/admin/{id}/update_cocktail', [CocktailsController::class, 'update'])->name('admin.update_cocktail');
+route::delete('/admin/delete_cocktail', [CocktailsController::class, 'delete'])->name('admin.delete_cocktail');
+
+//CRUD routes for cocktails elements (alcools, fruits etc...)
+route::post('/admin/create_cocktail_alcool', [CocktailsController::class, 'create_alcool_link'])->name('admin.create_cocktail_alcool');
+route::delete('/admin/delete_cocktail_alcool', [CocktailsController::class, 'delete_alcool_link'])->name('admin.delete_cocktail_alcool');
+
+route::post('/admin/create_cocktail_soft', [CocktailsController::class, 'create_soft_link'])->name('admin.create_cocktail_soft');
+route::delete('/admin/delete_cocktail_soft', [CocktailsController::class, 'delete_soft_link'])->name('admin.delete_cocktail_soft');
+
+route::post('/admin/create_cocktail_fruit', [CocktailsController::class, 'create_fruit_link'])->name('admin.create_cocktail_fruit');
+route::delete('/admin/delete_cocktail_fruit', [CocktailsController::class, 'delete_fruit_link'])->name('admin.delete_cocktail_fruit');
+
+route::post('/admin/create_cocktail_sirop', [CocktailsController::class, 'create_sirop_link'])->name('admin.create_cocktail_sirop');
+route::delete('/admin/delete_cocktail_sirop', [CocktailsController::class, 'delete_sirop_link'])->name('admin.delete_cocktail_sirop');
