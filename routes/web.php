@@ -10,6 +10,7 @@ use App\Http\Controllers\AlcoolsNameController;
 use App\Http\Controllers\AlcoolsTypesController;
 use App\Http\Controllers\GlassesTypesController;
 use App\Http\Controllers\CocktailsController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,12 @@ Route::get('/admin', [AdminController::class, 'index'])->name("admin.home");
 Route::get('/admin/manage_ingredients', [AdminController::class, 'manageIngredients'])->name("admin.manage_ingredients");
 Route::get('/admin/manage_cocktails', [AdminController::class, 'manageCocktails'])->name("admin.manage_cocktails");
 Route::get('/', [AdminController::class, 'home'])->name("home");
+
+//routes for login
+Route::get('/login', [LoginController::class, 'index'])->name("admin.login");
+Route::post('/checklogin', [LoginController::class, 'checklogin'])->name("admin.login.checklogin");
+// Route::get('/successlogin', [LoginController::class, 'successlogin'])->name("admin.login.successlogin");
+Route::get('/logout', [LoginController::class, 'logout'])->name("admin.login.logout");
 
 //CRUD routes for soft
 Route::post('/admin/create_soft', [SoftsListController::class, 'create'])->name('admin.create_soft');

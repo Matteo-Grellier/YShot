@@ -4,6 +4,15 @@
     <title>Admin Panel</title>
 @endsection
 @section('content')
+
+    @if(!isset(Auth::user()->email))
+    <script>window.location="{{ route('home'); }}";</script>
+    @endif
+
+    <div>
+        <a href="{{ route('admin.login.logout') }}">logout</a>
+    </div>
+
     <div class="manager-link-container">
         <div class="manager-link-element" onclick="location.href='{{ route('admin.manage_ingredients') }}'">
             <img src="./img/fruits.png" width="150px"/>
