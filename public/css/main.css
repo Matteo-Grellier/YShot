@@ -1,0 +1,152 @@
+/* HOME */
+.home-page-welcome {
+    margin: 10em;
+    height: 40vh;
+    
+}
+
+.home-page h1 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.welcome-content {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-content div {
+    margin-right: 50px;
+}
+
+.welcome-content p {
+    text-align:justify;
+    width: 30em;
+}
+
+.welcome-content img {
+    border-radius: 20px;
+    box-shadow: rgba(63, 63, 63, 0.3) 4px 6px 30px;
+}
+
+.home-page-link-element {
+    margin: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.underline-block-h1 {
+    width: 10em;
+    height: 1em;
+    background-color: #F16268;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-div {
+    transition: all 0.5s ease-in-out;
+    width: 20em;
+    height: 30em;
+    margin: 20px;
+    border-radius: 20px;
+    border: 2px solid #F16268;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.link-div:hover {
+    width: 21em;
+    height: 32em;  
+    box-shadow: rgba(63, 63, 63, 0.3) 4px 6px 30px;
+
+}
+
+/* DRINK */
+
+.drink-content {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 10em auto;
+    /* margin-left: 15em; */
+    width: 65vw;
+}
+
+.drink-element {
+    transition: all 0.5s ease-in-out;
+    width: 17em;
+    height: 22em;
+    margin: 20px;
+    border-radius: 20px;
+    border: 2px solid #F16268;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em; 
+}
+
+.drink-div:hover {
+    width: 21em;
+    height: 32em;  
+    box-shadow: rgba(63, 63, 63, 0.3) 4px 6px 30px;
+}
+
+/* COCKTAIL */
+
+.divider {
+    width: 2px;
+    height: 112%;
+    background-color: #F16268;
+    margin: 0 20px;
+}
+
+.subtitle {
+    color: rgb(68, 68, 68);
+    margin-bottom: 0;
+}
+
+.cocktail-element h1, h2, h3 {
+    margin: 0;
+}
+
+.cocktail-element {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffdfe0;
+    border-radius: 20px;
+    box-shadow: rgba(63, 63, 63, 0.3) 4px 6px 30px;
+    padding: 1em;
+}
+
+.cocktail-element > img {
+    margin-left: 20px;
+}
+
+.cocktail-details {
+    width: 100%;
+}
+
+.cocktail-details-name-glass {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.glass-type {
+    display: flex;
+}

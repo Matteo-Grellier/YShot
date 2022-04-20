@@ -11,6 +11,7 @@ use App\Http\Controllers\AlcoolsTypesController;
 use App\Http\Controllers\GlassesTypesController;
 use App\Http\Controllers\CocktailsController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,15 @@ use App\Http\Controllers\LoginController;
 |
 */
 
+Route::get('/', [MainController::class, 'home'])->name("home");
+Route::get('/cocktail', [MainController::class, 'cocktail'])->name("cocktail");
+Route::get('/alcool', [MainController::class, 'alcool'])->name("alcool");
+Route::get('/soft', [MainController::class, 'soft'])->name("soft");
+
+// ADMIN
 Route::get('/admin', [AdminController::class, 'index'])->name("admin.home");
 Route::get('/admin/manage_ingredients', [AdminController::class, 'manageIngredients'])->name("admin.manage_ingredients");
 Route::get('/admin/manage_cocktails', [AdminController::class, 'manageCocktails'])->name("admin.manage_cocktails");
-Route::get('/', [AdminController::class, 'home'])->name("home");
 
 //routes for login
 Route::get('/login', [LoginController::class, 'index'])->name("admin.login");

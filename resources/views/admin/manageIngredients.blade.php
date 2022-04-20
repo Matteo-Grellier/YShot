@@ -5,6 +5,10 @@
 @endsection
 @section('content')
 
+    @if(!isset(Auth::user()->email))
+    <script>window.location="{{ route('admin.login'); }}";</script>
+    @endif
+
     <div>   
         @include('admin.softs.softs')
         @include('admin.alcoolsTypes.alcoolsTypes')
