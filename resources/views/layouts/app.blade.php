@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset("/css/manage_cocktail.css")}}">
     <link rel="stylesheet" href="{{asset("/css/header-footer.css")}}">
     <link rel="stylesheet" href="{{asset("/css/main.css")}}">
+    <link rel="icon" href="{{asset("/favicon.ico")}}" />
     @yield('title')
 </head>
 <body>
