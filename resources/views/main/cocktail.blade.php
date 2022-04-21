@@ -33,7 +33,7 @@
                     @foreach($cocktailsFruits as $cocktailFruit)
                         @if($cocktailFruit->cocktails->id == $cocktail->id)
                             <h3>{{$cocktailFruit->quantity}} {{$cocktailFruit->fruits->name}}(s)</h3>
-                            <img src={{ asset('../storage/app/public/' . $cocktail->fruits->file_path) }} width="100px">
+                            <img src={{ asset('../storage/app/public/' . $cocktailFruit->fruits->file_path) }} width="100px">
                         @endif
                     @endforeach
                     @foreach($cocktailsAlcools as $cocktailAlcool)

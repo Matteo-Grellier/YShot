@@ -120,12 +120,12 @@
                     @csrf
                     <input type="number" class="nbr-input" name="quantity"/>
                     <input type="hidden" name="cocktail_id" value="{{$cocktail->id}}"/>
-                    <p> cL de </p>
                     <select name="fruits_id">
                         @foreach($fruitsList as $fruit) 
                             <option value={{ $fruit->id }}>{{ $fruit->name }}</option>
                         @endforeach
                     </select>
+                    <p>(s)</p>
                     <button type="submit"><img src="{{asset("./img/check-mark-red-saumon.png")}}" alt="check" height="20px"></button>
                 </form>                
             </td>
@@ -134,7 +134,7 @@
                     @foreach($cocktailsSirops as $cocktailSirop)
                         @if($cocktailSirop->cocktails->id == $cocktail->id)
                             <div class="cocktail-ingredient cocktail-sirops-element">
-                                <h3>{{$cocktailSirop->quantity}} {{$cocktailSirop->sirops->name}}(s)</h3>
+                                <h3>{{$cocktailSirop->quantity}} cL de {{$cocktailSirop->sirops->name}}</h3>
                                 <form action="{{route("admin.delete_cocktail_sirop")}}" method="post">
                                     @csrf
                                     @method('DELETE')
