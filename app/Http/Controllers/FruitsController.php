@@ -17,13 +17,17 @@ class FruitsController extends Controller
 
     public function storeFruits(Request $request)
     {
-        $file = $request->file('image');
-        $fileName = time().'_'.$file->getClientOriginalName();
-        $filePath = $file->storeAs('uploads', $fileName, 'public');
-        // dd($request->get("name"));
         $fruits = new fruits_table();
+
+        if($request->file()) {
+            $file = $request->file('image');
+            $fileName = time().'_'.$file->getClientOriginalName();
+            $filePath = $file->storeAs('uploads', $fileName, 'public');
+            $fruits->file_path = $filePath;
+        } else {
+            $fruits->file_path = "";
+        }
         $fruits->name = $request->get("name");
-        $fruits->file_path = $filePath;
         $fruits->save();
         return redirect()->route('admin.manage_ingredients');
     }

@@ -5,7 +5,12 @@
 @endsection
 @section('content')
 
-    <div>   
+    @if(!isset(Auth::user()->email))
+    <script>window.location="{{ route('admin.login'); }}";</script>
+    @endif
+
+    <div class="ingredients-container">   
+        <a href="{{route("admin.home")}}">Retour au panel administrateur</a>
         @include('admin.softs.softs')
         @include('admin.alcoolsTypes.alcoolsTypes')
         @include('admin.glassesTypes.glassesTypes')

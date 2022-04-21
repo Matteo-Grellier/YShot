@@ -1,6 +1,6 @@
-<div class="child">
+<div class="admin-ingredient child">
     <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste de type d'alcool</h1>
-    <table class="alcoolTable">
+    <table>
         <thead>
             <tr>
                 <th>Id</th>

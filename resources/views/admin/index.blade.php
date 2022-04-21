@@ -6,7 +6,7 @@
 @section('content')
 
     @if(!isset(Auth::user()->email))
-    <script>window.location="{{ route('home'); }}";</script>
+    <script>window.location="{{ route('admin.login'); }}";</script>
     @endif
 
     <div>

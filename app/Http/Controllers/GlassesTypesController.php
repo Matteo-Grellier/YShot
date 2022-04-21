@@ -11,13 +11,18 @@ use Illuminate\Support\Facades\Storage;
 class GlassesTypesController extends Controller
 {
      public function create(Request $request) {
-        $file = $request->file('image');
-        $fileName = time().'_'.$file->getClientOriginalName();
-        $filePath = $file->storeAs('uploads', $fileName, 'public');
-        
         $glassType = new GlassesTypes();
+
+        if($request->file()) {
+            $file = $request->file('image');
+            $fileName = time().'_'.$file->getClientOriginalName();
+            $filePath = $file->storeAs('uploads', $fileName, 'public');
+            $glassType->image_path = $filePath;
+        } else {
+            $glassType->image_path = "";
+        }
+        
         $glassType->name = $request->get('name');
-        $glassType->image_path = $filePath;
         $glassType->save();
 
         return redirect()->route("admin.manage_ingredients");
