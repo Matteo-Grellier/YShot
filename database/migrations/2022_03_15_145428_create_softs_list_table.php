@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_sirops', function (Blueprint $table) {
+        Schema::create('softs_list', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();
-
         });
     }
 
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_sirops');
+        Schema::dropIfExists('softs_list');
     }
 };

@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_sirops', function (Blueprint $table) {
+        Schema::create('glasses_types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image_path');
             $table->timestamps();
-
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_sirops');
+        Schema::dropIfExists('glasses_types');
     }
 };

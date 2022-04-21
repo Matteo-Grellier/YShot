@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
+@section('title')
+    <title>YShot</title>
+
 @section('content')
-    <div class="m-auto">
-        <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste de Sirops</h1>
-    
-    @foreach ($siropsList as $sirop)
-        <div>
-            <h3>{{ $sirop->name }}</h3>
-        </div>
-    @endforeach
+    <h1>YShot</h1>
+
+    <div>
+        <a href="{{ route('admin.login') }}">login</a>
+        <a href="{{ route('admin.home') }}">admin</a>
     </div>
 
 @endsection

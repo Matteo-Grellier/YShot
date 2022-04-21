@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_sirops', function (Blueprint $table) {
+        Schema::create('cocktails', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('glasses_types_id')->constrained();
             $table->timestamps();
-
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_sirops');
+        Schema::dropIfExists('cocktails');
     }
 };
