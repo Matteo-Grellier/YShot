@@ -1,6 +1,6 @@
-<div class="child">
-    <h1 class="underline underline-offset-1 text-2xl font-bold container mx-auto pt-10 ">Liste de type de verre</h1>
-    <table class="glassTable">
+<div class="admin-ingredient child">
+    <h1>Liste de type de verre</h1>
+    <table>
         <thead>
             <tr>
                 <th>Id</th>

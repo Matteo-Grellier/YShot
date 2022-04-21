@@ -10,8 +10,8 @@
     @endif
 
     <div class="manage_cocktail_container">
+        <a href="{{route("admin.home")}}">< Retour au panel administrateur</a>
         <div>
-            <a href="{{route("admin.home")}}">< Retour</a>
             <h1>Liste des cocktails</h1>
         </div>   
         @include('admin.cocktails.cocktails')

@@ -1,12 +1,10 @@
-<div class="child">
-    <h1 class="">Liste des Sirops</h1>
-    <table class="">
+<div class="admin-ingredient child">
+    <h1>Liste des Sirops</h1>
+    <table>
         <thead>
             <tr>
                 <th>id</th>
                 <th>name</th>
-                <th>created-at</th>
-                <th>updated-at</th>
                 <th>Supprimer</th>
                 <th>Modifier</th>
             </tr>
@@ -16,8 +14,6 @@
         <tr>
             <td class="">{{ $sirop->id }}</td>
             <td class="">{{ $sirop->name }}</td>
-            <td class="">{{ $sirop->created_at }}</td>
-            <td class="">{{ $sirop->updated_at }}</td>
             <td class="">
                 <form action="{{ route('sirops.delete') }}" method="POST">
                     @csrf

@@ -122,7 +122,7 @@ nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* margin-left: 20em; */
+    margin-right: 2em;
     /* align-items: center; */
 }
 
@@ -189,3 +189,43 @@ li a:active {
 
 
 /* FOOTER */
+
+footer {
+    background-color: rgb(18, 18, 18);
+    height: 50vh;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Montserrat";
+}
+
+footer h2, footer h3 {
+    font-weight: normal;
+    margin: 0.2em;
+}
+
+footer h2 {
+    text-decoration: underline;
+}
+
+footer a {
+    color: #F16268;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+
+footer a:hover {
+    color: #ff3c46;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+footer .icon-footer img {
+    margin: 1em;
+}

@@ -9,7 +9,8 @@
     <script>window.location="{{ route('admin.login'); }}";</script>
     @endif
 
-    <div>   
+    <div class="ingredients-container">   
+        <a href="{{route("admin.home")}}">Retour au panel administrateur</a>
         @include('admin.softs.softs')
         @include('admin.alcoolsTypes.alcoolsTypes')
         @include('admin.glassesTypes.glassesTypes')

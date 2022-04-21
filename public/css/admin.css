@@ -36,3 +36,201 @@
     font-size: 22px;
     font-weight: bold;
 }
+
+/* LOGIN */
+
+.login-container {
+    margin: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container h1 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.error-message strong {
+    color: #ff5c64;
+}
+
+.error-message {
+    margin-top: 10px;
+}
+
+.error-message li {
+    list-style: none;
+    color: #ff9f38;
+}
+
+.login-container form input {
+    border-radius: 20px;
+    border: 1px solid #F16268;
+    padding: 0.5em;
+    font-family: "Open Sans";
+}
+
+.login-container form input[type="submit"] {
+    background-color: #F16268;
+}
+
+/* LOGOUT */
+
+.logout-button {
+    border: 1px solid #F16268;
+    border-radius: 40px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+/* INGREDIENTS */
+
+.admin-ingredient {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-ingredient a{
+    border: 1px solid #F16268;
+    border-radius: 20px;
+}
+
+.admin-ingredient h1 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.admin-ingredient form {
+    margin: 10px;
+}
+
+.admin-ingredient input {
+    border-radius: 20px;
+    border: 1px solid #F16268;
+    padding: 0.5em;
+    font-family: "Open Sans";
+}
+
+.admin-ingredient input[type="submit"] {
+    background-color: #F16268;
+}
+
+.admin-ingredient button, .admin-ingredient select  {
+    background-color: #F16268;
+    border-radius: 20px;
+    border: 1px solid #F16268;
+    padding: 0.5em;
+    font-family: "Open Sans";
+}
+
+.admin-ingredient table {
+    border-collapse: collapse;
+}
+
+.admin-ingredient table button, .admin-ingredient table a {
+    margin: 10px;
+    background-color: rgb(255, 242, 242);
+    border: 2px solid #F16268;
+    color: #000;
+    font-size: 14px;
+    padding: 0.2em;
+}
+
+.admin-ingredient td {
+    border: 1px solid #ffb1b5;
+    background-color: #ffeaeb;
+    padding-top: 10px;
+}
+
+.admin-ingredient th {
+    border: none;
+    background-color: rgb(18, 18, 18);
+    color: #fff;
+}
+
+.ingredients-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.ingredients-container a {
+    color: #F16268;
+    text-decoration: underline;
+    margin-bottom: 5em;
+}
+
+.ingredients-container a:hover {
+    color: #ff3c46;
+}
+
+/* EDIT INGREDIENTS */
+
+.edit-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-container h3 {
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.edit-container button, .edit-container input {
+    border: 2px solid #F16268;
+    border-radius: 20px;
+    padding: 0.5em;
+    background: none;
+}
+
+.edit-container button:hover {
+    background-color: #ffb7ba;
+}
+
+.edit-container a {
+    color: #F16268;
+    text-decoration: underline;
+    margin-bottom: 5em;
+}
+
+.edit-container a:hover {
+    color: #ff3c46;
+}
+
+/* COCKTAIL */
+
+.manage_cocktail_container {
+    margin-top: 100px;
+    height: 100vh;
+}
+
+.manage_cocktail_container h1 {
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.manage_cocktail_container a {
+    color: #F16268;
+    text-decoration: underline;
+    margin-bottom: 5em;
+}
+
+.manage_cocktail_container a:hover {
+    color: #ff3c46;
+}

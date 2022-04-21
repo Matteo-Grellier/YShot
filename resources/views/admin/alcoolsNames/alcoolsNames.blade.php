@@ -1,6 +1,6 @@
-<div class="child">
+<div class="admin-ingredient child">
     <h1 class="">Liste de noms d'alcool</h1>
-    <table class="alcoolTable">
+    <table>
         <thead>
             <tr>
                 <th>Name</th>

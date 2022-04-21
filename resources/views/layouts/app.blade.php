@@ -19,6 +19,9 @@
         </div>
         <div class="navbar_wrapper">
             <nav>
+                @if(isset(Auth::user()->email))
+                <li class="logout-button"><a href="{{route("admin.login.logout")}}">Se déconnecter</a></li>
+                @endif
                 <ul>
                     <li><a href="{{route("home")}}">Accueil</a></li>
                     <li><a href="{{route("cocktail")}}">Cocktail</a></li>
@@ -33,7 +36,25 @@
         @yield('content')
     </main>
     <footer>
-
+        <div>
+            <h2>Réalisé par </h2>
+            <h3>Mathéo LEGER</h3>
+            <h3>Mattéo GRELLIER</h3>
+            <h3>Louis BROCHARD</h3>
+        </div>
+        <div>
+            <h3>Yshot</h3>
+            <a href="{{route("home")}}">Accueil</a>
+            <a href="{{route("cocktail")}}">Cocktail</a>
+            <a href="{{route("alcool")}}">Alcool</a>
+            <a href="{{route("soft")}}">Soft</a>
+        </div>
+        <div class="icon-footer">
+            <a target="_blank" href="https://github.com/Matteo-Grellier/YShot"><img src="{{asset("img/github.png")}}" alt="" width="30px" style="filter: brightness(0) invert(1);"></a>
+            <a target="_blank" href="https://laravel.com/"><img src="{{asset("img/laravel.png")}}" alt="" width="30px" style="filter: brightness(0) invert(1);"></a>
+            <a target="_blank" href=""><img src="{{asset("img/instagram(1).png")}}" alt="" width="30px" style="filter: brightness(0) invert(1);"></a>
+            
+        </div>
     </footer>
     <script src="{{asset("js/header.js")}}"></script>
 </body>
